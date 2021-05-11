@@ -2,9 +2,7 @@
   <v-data-table
     :headers="headers"
     :items="employees"
-    :items-per-page="5"
-    @click:row="selectRow"
-    :multi-sort="true"
+    :hide-default-footer="true"
   ></v-data-table>
 </template>
 
@@ -19,10 +17,12 @@ export default {
   },
   data: () => ({
     headers: [
-      { text: "Employee ID", value: "id" },
-      { text: "Name", value: "name" },
-      { text: "Position Title", value: "title" },
-      { text: "Salary", value: "salary" },
+      { text: "Europe", value: "europe" },
+      { text: "Asia", value: "asia" },
+      { text: "Africa", value: "africa" },
+      { text: "Americas", value: "americas" },
+      { text: "Australia", value: "australia" },
+      { text: "Top destinations", value: "top-destinations" },
     ],
   }),
 };

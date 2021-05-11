@@ -1,12 +1,199 @@
 <template>
-  <div class="home"></div>
+  <v-app class="home">
+    <AppBar />
+
+    <!-- title card -->
+    <v-container fluid>
+      <v-row>
+        <TitleCard />
+      </v-row>
+    </v-container>
+
+    <!-- two cards -->
+    <v-container>
+      <v-row class="align-center">
+        <v-spacer></v-spacer>
+        <v-col cols="6" class="d-flex flex-column">
+          <div class="pl-10">
+            <h2 class="example-title--first">Hand picked tours for you.</h2>
+            <p class="example-subtitle--first">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+              fermentum nunc tristique, cursus lorem quis, finibus dolor. Cras
+              mollis, ante nec euismod porta, dolor massa venenatis sem.
+            </p>
+          </div>
+        </v-col>
+        <v-col cols="5" class="d-flex"> <ExampleCard1 /> </v-col>
+        <v-spacer></v-spacer>
+      </v-row>
+
+      <v-row class="align-center">
+        <v-spacer></v-spacer>
+        <v-col cols="5" class="d-flex pl-10"> <ExampleCard2 /></v-col>
+        <v-col cols="6" class="d-flex flex-column">
+          <div class="pl-10">
+            <h2 class="example-title--second">
+              Choose what suits you the most.
+            </h2>
+            <p class="example-subtitle--second">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+              fermentum nunc tristique, cursus lorem quis, finibus dolor. Cras
+              mollis, ante nec euismod porta, dolor massa venenatis sem.
+            </p>
+          </div>
+        </v-col>
+        <v-spacer></v-spacer>
+      </v-row>
+    </v-container>
+
+    <!-- second title card -->
+    <v-container fluid>
+      <v-row>
+        <SecondTitleCard />
+      </v-row>
+    </v-container>
+
+    <!-- the other two -->
+    <v-container>
+      <v-row class="align-center">
+        <v-spacer></v-spacer>
+        <v-col cols="6" class="d-flex flex-column">
+          <div class="pl-8">
+            <h2 class="example-title--third">
+              We did the hardwork, you just be picky.
+            </h2>
+            <p class="example-subtitle--first">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+              fermentum nunc tristique, cursus lorem quis, finibus dolor. Cras
+              mollis, ante nec euismod porta, dolor massa venenatis sem.
+            </p>
+          </div>
+        </v-col>
+        <v-col cols="5" class="pl-15 d-flex"> <ExampleCard3 /> </v-col>
+        <v-spacer></v-spacer>
+      </v-row>
+
+      <v-row class="align-center">
+        <v-spacer></v-spacer>
+        <v-col cols="5" class="pr-8 d-flex pl-10"> <ExampleCard4 /></v-col>
+        <v-col cols="6" class="d-flex flex-column">
+          <div class="pr-8">
+            <h2 class="example-title--second">
+              Choose what suits you the most.
+            </h2>
+            <p class="example-subtitle--second">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+              fermentum nunc tristique, cursus lorem quis, finibus dolor. Cras
+              mollis, ante nec euismod porta, dolor massa venenatis sem.
+            </p>
+            <v-btn flat color="#cb0202" dark class="learn-more-btn"
+              >Learn more</v-btn
+            >
+          </div>
+        </v-col>
+      </v-row>
+    </v-container>
+
+    <!-- table -->
+    <v-container class="vertical-line">
+      <div>
+        <div class="dot"></div>
+        <EmployeesTable :employees="employees" class="table" />
+      </div>
+
+      <v-row>
+        <v-col>
+          <p class="closing-line">We go around the world.</p>
+        </v-col>
+        <v-col>
+          <p class="flight-announcement">You are just 3 hours away from</p>
+          <p class="flight-announcement-destination">Maldives</p>
+        </v-col>
+      </v-row>
+    </v-container>
+
+    <!-- footer -->
+    <Footer />
+  </v-app>
 </template>
 
 <script>
-// @ is an alias to /src
+import EmployeesTable from "../components/EmployeesTable";
+import employeesData from "../data/employees.json";
+import TitleCard from "../components/TitleCard";
+import SecondTitleCard from "../components/SecondTitleCard";
+import ExampleCard1 from "../components/ExampleCard1";
+import ExampleCard2 from "../components/ExampleCard2";
+import ExampleCard3 from "../components/ExampleCard3";
+import ExampleCard4 from "../components/ExampleCard4";
+import AppBar from "../components/AppBar";
+import Footer from "../components/Footer";
 
 export default {
   name: "Home",
-  components: {},
+  components: {
+    AppBar,
+    TitleCard,
+    ExampleCard1,
+    ExampleCard2,
+    SecondTitleCard,
+    ExampleCard3,
+    ExampleCard4,
+    EmployeesTable,
+    Footer,
+  },
+  data() {
+    return {
+      employees: employeesData,
+    };
+  },
 };
 </script>
+
+<style scoped>
+.learn-more-btn {
+  line-height: 24px;
+  font-size: 10px;
+  font-family: "Open Sans", sans-serif;
+  margin-right: 40px;
+  text-transform: none !important;
+  width: 150px;
+  height: 34px;
+}
+.table {
+  margin-left: 35px;
+}
+.closing-line {
+  color: #231f20;
+  font-size: 42px;
+  font-weight: bold;
+  margin-top: 120px;
+  margin-left: 35px;
+  margin-bottom: 100px;
+}
+.flight-announcement {
+  text-align: right;
+  color: #bebebe;
+  margin-top: 148px;
+}
+.flight-announcement-destination {
+  text-align: right;
+  color: #231f20;
+  margin-top: -10px;
+}
+.vertical-line {
+  border-left: 2px solid #bebebe;
+  margin-top: 75px;
+  height: 560px;
+  position: relative;
+}
+.dot {
+  height: 4px;
+  width: 4px;
+  background-color: #cb0202;
+  border-radius: 50%;
+  position: absolute;
+  margin-left: -15px;
+  margin-top: 20px;
+}
+</style>

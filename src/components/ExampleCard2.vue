@@ -1,34 +1,22 @@
 <template>
-  <v-card class="mx-auto my-12" width="250" flat elevation="8">
+  <v-card class="mx-auto my-12" max-width="300" flat>
     <v-img
-      height="230"
-      lazy-src="../assets/chelsea-gates-1419582-unsplash.png"
-      src="../assets/chelsea-gates-1419582-unsplash@2x.png"
+      height="300"
+      lazy-src="../assets/magnus-lindvall-4407-unsplash.png"
+      src="../assets/magnus-lindvall-4407-unsplash@2x.png"
     ></v-img>
+
     <v-card-text>
-      <v-row>
+      <v-row align="center" class="mx-0">
         <v-col cols="8">
-          <div class="black--text subtitle-1">Ban Thai</div>
-          <div class="grey--text caption">Silom Soi 1, Bangkok</div>
+          <div class="black--text subtitle-1">Great Reefs</div>
+          <div class="grey--text caption">North Lake, Iceland</div>
+          <div class="grey--text caption">Add to fav</div>
         </v-col>
+
         <v-col align="right">
-          <v-chip label>4.6</v-chip>
-        </v-col>
-      </v-row>
-
-      <v-row>
-        <v-col>
-          <div><v-chip dark x-small color="black">Included</v-chip></div>
-          <div class="grey--text caption">Free Wifi·Swimming Pool</div>
-        </v-col>
-      </v-row>
-
-      <v-row>
-        <v-col cols="8">
+          <div class="black--text subtitle-1">$169</div>
           <div class="grey--text caption">As low as</div>
-          <div class="black--text title">$300</div>
-        </v-col>
-        <v-col align="right">
           <v-icon>mdi-heart-outline</v-icon>
         </v-col>
       </v-row>
@@ -37,7 +25,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: "ExampleCard",
+};
 </script>
 
 <style lang="scss" scoped></style>
