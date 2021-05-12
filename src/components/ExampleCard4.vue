@@ -8,8 +8,8 @@
     <v-card-text>
       <v-row>
         <v-col cols="8">
-          <div class="black--text subtitle-1">Ban Thai</div>
-          <div class="grey--text caption">Silom Soi 1, Bangkok</div>
+          <p class="card-title">Ban Thai</p>
+          <p class="card-subtitle">Silom Soi 1, Bangkok</p>
         </v-col>
         <v-col align="right">
           <v-chip label>4.6</v-chip>
@@ -40,4 +40,19 @@
 export default {};
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.card-title {
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+  color: black;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+.card-subtitle {
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+  color: #bebebe;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+</style>

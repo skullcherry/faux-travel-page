@@ -60,7 +60,7 @@ export default {
 
 <style lang="scss" scoped>
 .site-logo {
-  color: #ffffffff;
+  color: #ffffff;
   line-height: 72px;
   font-size: 22px;
   font-family: acumin-pro, sans-serif;
@@ -69,7 +69,7 @@ export default {
   margin-right: 90px;
 }
 .top-links {
-  color: #ffffffff;
+  color: #ffffff;
   line-height: 24px;
   font-size: 10px;
   font-family: "Open Sans", sans-serif;

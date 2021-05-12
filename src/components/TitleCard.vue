@@ -17,7 +17,7 @@
 
         <v-item-group class="btn-group">
           <v-item>
-            <v-btn color="red darken-3" fab small dark>
+            <v-btn color="#cb0202" fab small dark>
               <v-icon>mdi-play</v-icon>
             </v-btn>
           </v-item>
@@ -46,7 +46,7 @@ export default {
   max-width: 600px;
 }
 .card-title-text {
-  color: #ffffffff;
+  color: #ffffff;
   line-height: 100px;
   font-size: 100px;
   text-align: center;
@@ -55,7 +55,7 @@ export default {
   letter-spacing: -5px;
 }
 .card-subtitle {
-  color: #ffffffff;
+  color: #ffffff;
   line-height: 24px;
   font-size: 16px;
   text-align: center;
@@ -72,7 +72,7 @@ export default {
   transform: translate(-50%, 0);
 }
 .btn-text {
-  color: #ffffffff;
+  color: #ffffff;
   line-height: 24px;
   font-size: 10px;
   font-family: "Open Sans", sans-serif;

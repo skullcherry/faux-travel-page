@@ -12,10 +12,11 @@
     <!-- two cards -->
     <v-container>
       <v-row class="align-center">
-        <v-spacer></v-spacer>
         <v-col cols="6" class="d-flex flex-column">
           <div class="pl-10">
-            <h2 class="example-title--first">Hand picked tours for you.</h2>
+            <h2 class="example-title example-title--first">
+              Hand picked tours for you.
+            </h2>
             <p class="example-subtitle--first">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
               fermentum nunc tristique, cursus lorem quis, finibus dolor. Cras
@@ -23,16 +24,16 @@
             </p>
           </div>
         </v-col>
-        <v-col cols="5" class="d-flex"> <ExampleCard1 /> </v-col>
         <v-spacer></v-spacer>
+        <v-col cols="5" class="d-flex"> <ExampleCard1 /> </v-col>
       </v-row>
 
       <v-row class="align-center">
-        <v-spacer></v-spacer>
         <v-col cols="5" class="d-flex pl-10"> <ExampleCard2 /></v-col>
+        <v-spacer></v-spacer>
         <v-col cols="6" class="d-flex flex-column">
           <div class="pl-10">
-            <h2 class="example-title--second">
+            <h2 class="example-title example-title--second">
               Choose what suits you the most.
             </h2>
             <p class="example-subtitle--second">
@@ -42,7 +43,6 @@
             </p>
           </div>
         </v-col>
-        <v-spacer></v-spacer>
       </v-row>
     </v-container>
 
@@ -56,10 +56,9 @@
     <!-- the other two -->
     <v-container>
       <v-row class="align-center">
-        <v-spacer></v-spacer>
-        <v-col cols="6" class="d-flex flex-column">
+        <v-col cols="6">
           <div class="pl-8">
-            <h2 class="example-title--third">
+            <h2 class="example-title example-title--third">
               We did the hardwork, you just be picky.
             </h2>
             <p class="example-subtitle--first">
@@ -69,16 +68,16 @@
             </p>
           </div>
         </v-col>
-        <v-col cols="5" class="pl-15 d-flex"> <ExampleCard3 /> </v-col>
         <v-spacer></v-spacer>
+        <v-col cols="5"> <ExampleCard3 /> </v-col>
       </v-row>
 
       <v-row class="align-center">
-        <v-spacer></v-spacer>
         <v-col cols="5" class="pr-8 d-flex pl-10"> <ExampleCard4 /></v-col>
+        <v-spacer></v-spacer>
         <v-col cols="6" class="d-flex flex-column">
           <div class="pr-8">
-            <h2 class="example-title--second">
+            <h2 class="example-title example-title--second">
               Choose what suits you the most.
             </h2>
             <p class="example-subtitle--second">
@@ -95,22 +94,24 @@
     </v-container>
 
     <!-- table -->
-    <v-container class="vertical-line">
-      <div>
-        <div class="dot"></div>
-        <EmployeesTable :employees="employees" class="table" />
-      </div>
+    <div style="background-color: #fcfcfc">
+      <v-container class="vertical-line">
+        <div>
+          <div class="dot"></div>
+          <EmployeesTable :employees="employees" class="table" />
+        </div>
 
-      <v-row>
-        <v-col>
-          <p class="closing-line">We go around the world.</p>
-        </v-col>
-        <v-col>
-          <p class="flight-announcement">You are just 3 hours away from</p>
-          <p class="flight-announcement-destination">Maldives</p>
-        </v-col>
-      </v-row>
-    </v-container>
+        <v-row>
+          <v-col>
+            <p class="closing-line">We go around the world.</p>
+          </v-col>
+          <v-col>
+            <p class="flight-announcement">You are just 3 hours away from</p>
+            <p class="flight-announcement-destination">Maldives</p>
+          </v-col>
+        </v-row>
+      </v-container>
+    </div>
 
     <!-- footer -->
     <Footer />
@@ -150,7 +151,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .learn-more-btn {
   line-height: 24px;
   font-size: 10px;
@@ -182,10 +183,11 @@ export default {
   margin-top: -10px;
 }
 .vertical-line {
-  border-left: 2px solid #bebebe;
+  border-left: 2px solid;
   margin-top: 75px;
   height: 560px;
   position: relative;
+  border-image: linear-gradient(to bottom, #bebebe40, #bebebe, #bebebe40) 1;
 }
 .dot {
   height: 4px;

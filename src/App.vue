@@ -14,30 +14,38 @@ export default {
 };
 </script>
 
-<style>
-.example-title--first {
+<style lang="scss">
+$color1: #231f20;
+$color2: #999999;
+$color3: black;
+$color4: #bebebe;
+$color5: white;
+$color6: #cb0202;
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+@import url("https://use.typekit.net/hxm7brb.css");
+
+.example-title {
   color: #231f20;
-  font-size: 42px;
-  font-weight: bold;
-  max-width: 360px;
-  line-height: 42px;
   margin-bottom: 47px;
-}
-.example-title--second {
-  color: #231f20;
-  font-size: 24px;
   font-weight: bold;
-  max-width: 200px;
-  line-height: 32px;
-  margin-bottom: 47px;
-}
-.example-title--third {
-  color: #231f20;
-  font-size: 42px;
-  font-weight: bold;
-  max-width: 400px;
-  line-height: 42px;
-  margin-bottom: 47px;
+
+  &--first {
+    font-size: 42px;
+    max-width: 360px;
+    line-height: 42px;
+  }
+  &--second {
+    font-size: 24px;
+    max-width: 200px;
+    line-height: 32px;
+  }
+
+  &--third {
+    font-size: 42px;
+    max-width: 400px;
+    line-height: 42px;
+  }
 }
 .example-subtitle--first {
   color: #999999;

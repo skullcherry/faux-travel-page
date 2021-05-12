@@ -22,12 +22,6 @@
       <label class="next-flight"> Lufthansa</label>
       <label class="static"> {{ currentDateTime() }}</label>
     </v-col>
-
-    <!-- <v-col>
-      <pre class="next-flight">
-        <v-icon>mdi-airplane mdi-rotate-90</v-icon>  Next flight:  Lufthansa  {{ currentDateTime() }}
-      </pre>
-    </v-col> -->
   </v-footer>
 </template>
 
