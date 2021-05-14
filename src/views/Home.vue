@@ -12,8 +12,8 @@
     <!-- two cards -->
     <v-container>
       <v-row class="align-center">
-        <v-col cols="6" class="d-flex flex-column">
-          <div class="pl-10">
+        <v-col cols="6" class="first-blurb">
+          <div>
             <h2 class="example-title example-title--first">
               Hand picked tours for you.
             </h2>
@@ -25,14 +25,13 @@
           </div>
         </v-col>
         <v-spacer></v-spacer>
-        <v-col cols="5" class="d-flex"> <ExampleCard1 /> </v-col>
+        <v-col cols="5" class="ex-card1"> <ExampleCard1 /> </v-col>
       </v-row>
 
       <v-row class="align-center">
-        <v-col cols="5" class="d-flex pl-10"> <ExampleCard2 /></v-col>
-        <v-spacer></v-spacer>
-        <v-col cols="6" class="d-flex flex-column">
-          <div class="pl-10">
+        <v-col cols="5" class="ex-card2"> <ExampleCard2 /></v-col>
+        <v-col cols="7" class="second-blurb">
+          <div>
             <h2 class="example-title example-title--second">
               Choose what suits you the most.
             </h2>
@@ -56,10 +55,10 @@
     <!-- the other two -->
     <v-container>
       <v-row class="align-center">
-        <v-col cols="6">
-          <div class="pl-8">
+        <v-col>
+          <div class="third-blurb">
             <h2 class="example-title example-title--third">
-              We did the hardwork, you just be picky.
+              We did the hardwork, you just be picky
             </h2>
             <p class="example-subtitle--first">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
@@ -68,15 +67,13 @@
             </p>
           </div>
         </v-col>
-        <v-spacer></v-spacer>
-        <v-col cols="5"> <ExampleCard3 /> </v-col>
+        <v-col> <ExampleCard3 /> </v-col>
       </v-row>
 
       <v-row class="align-center">
-        <v-col cols="5" class="pr-8 d-flex pl-10"> <ExampleCard4 /></v-col>
-        <v-spacer></v-spacer>
-        <v-col cols="6" class="d-flex flex-column">
-          <div class="pr-8">
+        <v-col cols="5" class="ex-card2"> <ExampleCard4 /></v-col>
+        <v-col cols="7">
+          <div>
             <h2 class="example-title example-title--second">
               Choose what suits you the most.
             </h2>
@@ -113,7 +110,6 @@
       </v-container>
     </div>
 
-    <!-- footer -->
     <Footer />
   </v-app>
 </template>
@@ -152,6 +148,19 @@ export default {
 </script>
 
 <style>
+.first-blurb {
+  padding-left: 130px;
+}
+.ex-card1 {
+  padding-right: 80px;
+}
+.ex-card2 {
+  padding-left: 130px;
+}
+.third-blurb {
+  padding-left: 100px;
+}
+
 .learn-more-btn {
   line-height: 24px;
   font-size: 10px;

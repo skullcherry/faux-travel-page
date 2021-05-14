@@ -3,6 +3,7 @@
     :headers="headers"
     :items="employees"
     :hide-default-footer="true"
+    class="table"
   ></v-data-table>
 </template>
 
@@ -28,4 +29,24 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.table::v-deep {
+  > .v-data-table__wrapper > table {
+    > thead > tr:last-child > th {
+      color: #231f20 !important;
+      background-color: #fcfcfc;
+      border-bottom: none !important;
+    }
+    > tbody > tr {
+      &:hover {
+        background: none !important;
+      }
+      > td {
+        color: #bebebe;
+        background-color: #fcfcfc;
+        border-bottom: none !important;
+      }
+    }
+  }
+}
+</style>

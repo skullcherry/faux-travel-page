@@ -2,9 +2,10 @@
   <v-card color="rgb(0, 0, 0, 0)" flat>
     <v-img
       lazy-src="../assets/mifxal-latheef-204486-unsplash.png"
-      src="../assets/mifxal-latheef-204486-unsplash@2x.png"
+      src="../assets/mifxal-latheef-204486.png"
+      class="full"
     >
-      <v-row class="card-full">
+      <v-row class="card-title">
         <v-card-title>
           <p class="card-title-text">Discover the furthest</p>
         </v-card-title>
@@ -38,7 +39,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.card-full {
+.full {
+  height: 800px;
+}
+.card-title {
   position: absolute;
   left: 50%;
   top: 250px;

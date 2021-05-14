@@ -2,7 +2,8 @@
   <v-card color="rgb(0, 0, 0, 0)" flat>
     <v-img
       lazy-src="../assets/damien-checoury-749044-unsplash.png"
-      src="../assets/damien-checoury-749044-unsplash@2x.png"
+      src="../assets/damien-checoury-749044.png"
+      class="full-card"
     >
       <v-row class="card-title">
         <v-card-title>
@@ -39,6 +40,9 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
+.full-card {
+  height: 600px;
+}
 .card-title {
   position: absolute;
   top: 50%;
