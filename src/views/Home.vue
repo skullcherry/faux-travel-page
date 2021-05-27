@@ -9,6 +9,18 @@
       </v-row>
     </v-container>
 
+    <!-- <v-container>
+      <v-row>
+        <Six />
+      </v-row>
+    </v-container> -->
+
+    <!-- <v-container>
+      <v-row>
+        <Eight />
+      </v-row>
+    </v-container> -->
+
     <!-- two cards -->
     <v-container>
       <v-row class="align-center">
@@ -46,9 +58,14 @@
     </v-container>
 
     <!-- second title card -->
-    <v-container fluid>
+    <!-- <v-container fluid>
       <v-row>
         <SecondTitleCard />
+      </v-row>
+    </v-container> -->
+    <v-container id="below-the-fold" v-intersect="showMoreContent">
+      <v-row>
+        <Seven />
       </v-row>
     </v-container>
 
@@ -82,7 +99,7 @@
               fermentum nunc tristique, cursus lorem quis, finibus dolor. Cras
               mollis, ante nec euismod porta, dolor massa venenatis sem.
             </p>
-            <v-btn flat color="#cb0202" dark class="learn-more-btn"
+            <v-btn text color="#cb0202" dark class="learn-more-btn"
               >Learn more</v-btn
             >
           </div>
@@ -115,16 +132,19 @@
 </template>
 
 <script>
-import EmployeesTable from "../components/EmployeesTable";
+import AppBar from "../components/AppBar";
 import employeesData from "../data/employees.json";
 import TitleCard from "../components/TitleCard";
-import SecondTitleCard from "../components/SecondTitleCard";
 import ExampleCard1 from "../components/ExampleCard1";
 import ExampleCard2 from "../components/ExampleCard2";
+// import SecondTitleCard from "../components/SecondTitleCard";
 import ExampleCard3 from "../components/ExampleCard3";
 import ExampleCard4 from "../components/ExampleCard4";
-import AppBar from "../components/AppBar";
+import EmployeesTable from "../components/EmployeesTable";
 import Footer from "../components/Footer";
+// import Six from "../components/Six.vue";
+import Seven from "../components/Seven.vue";
+// import Eight from "../components/Eight.vue";
 
 export default {
   name: "Home",
@@ -133,21 +153,58 @@ export default {
     TitleCard,
     ExampleCard1,
     ExampleCard2,
-    SecondTitleCard,
+    // SecondTitleCard,
     ExampleCard3,
     ExampleCard4,
     EmployeesTable,
     Footer,
+    // Six,
+    Seven,
+    // Eight,
   },
   data() {
     return {
       employees: employeesData,
+      loadNewContent: false,
+      headline:
+        "Here You Learn Everything about building Progressive Vue Apps!",
+      sections: [
+        { headline: "What does a Service Worker do?" },
+        {
+          headline: "How does a Service Worker exactly work?",
+        },
+      ],
+      cards: [
+        {
+          headline: "Makes App available Offline",
+          text:
+            "By using the CachingAPI all static elements on an app can be pre-cached",
+          imgName: "../assets/damien-checoury-749044.png",
+        },
+        {
+          headline: "Use background sync to defer actions",
+          text:
+            "User inputs entered when offline are sent in the background once they get connectivity.",
+          imgName: "../assets/damien-checoury-749044.png",
+        },
+        {
+          headline: "Send Push Notifications",
+          text:
+            "The Notifications API lets us send push notifications to re-engage users.",
+          imgName: "../assets/damien-checoury-749044.png",
+        },
+      ],
     };
+  },
+  methods: {
+    showMoreContent(entries) {
+      this.loadNewContent = entries[0].isIntersecting;
+    },
   },
 };
 </script>
 
-<style>
+<style scoped>
 .first-blurb {
   padding-left: 130px;
 }

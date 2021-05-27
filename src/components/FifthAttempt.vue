@@ -1,0 +1,53 @@
+<template>
+  <div class="slides">
+    <div class="slides-inner">
+      <div v-for="(slide, id) in slides" :key="id">
+        <FifthAttemptSlide :slide="slide" />
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import FifthAttemptSlide from "./FifthAttemptSlide.vue";
+
+export default {
+  components: {
+    FifthAttemptSlide,
+  },
+  data() {
+    return {
+      slides: [
+        {
+          title: "Iceland",
+          image: "@/assets/slides/damien-checoury1.png",
+          leftText: "We curate the best places to stay around the world",
+          rightTextTop: "The North Lake",
+          rightTextBottom: "Iceland",
+          id: 1,
+        },
+        {
+          title: "Aislănd",
+          image: "@/assets/slides/damien-checoury2.png",
+          leftText: "We curate the best places to stay around the world",
+          rightTextTop: "The North Lake",
+          rightTextBottom: "Iceland",
+          id: 2,
+        },
+        {
+          title: "Ice ice",
+          image: "@/assets/slides/damien-checoury3.png",
+          leftText: "We curate the best places to stay around the world",
+          rightTextTop: "The North Lake",
+          rightTextBottom: "Iceland",
+          id: 3,
+        },
+      ],
+      innerWidth: 0,
+      singleWith: 0,
+    };
+  },
+};
+</script>
+
+<style lang="scss" scoped></style>
