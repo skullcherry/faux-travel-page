@@ -9,18 +9,6 @@
       </v-row>
     </v-container>
 
-    <!-- <v-container>
-      <v-row>
-        <Six />
-      </v-row>
-    </v-container> -->
-
-    <!-- <v-container>
-      <v-row>
-        <Eight />
-      </v-row>
-    </v-container> -->
-
     <!-- two cards -->
     <v-container>
       <v-row class="align-center">
@@ -63,6 +51,7 @@
         <SecondTitleCard />
       </v-row>
     </v-container> -->
+
     <v-container id="below-the-fold" v-intersect="showMoreContent">
       <v-row>
         <Seven />
@@ -99,7 +88,7 @@
               fermentum nunc tristique, cursus lorem quis, finibus dolor. Cras
               mollis, ante nec euismod porta, dolor massa venenatis sem.
             </p>
-            <v-btn text color="#cb0202" dark class="learn-more-btn"
+            <v-btn color="#cb0202" dark class="learn-more-btn"
               >Learn more</v-btn
             >
           </div>
@@ -114,7 +103,6 @@
           <div class="dot"></div>
           <EmployeesTable :employees="employees" class="table" />
         </div>
-
         <v-row>
           <v-col>
             <p class="closing-line">We go around the world.</p>
@@ -142,9 +130,7 @@ import ExampleCard3 from "../components/ExampleCard3";
 import ExampleCard4 from "../components/ExampleCard4";
 import EmployeesTable from "../components/EmployeesTable";
 import Footer from "../components/Footer";
-// import Six from "../components/Six.vue";
 import Seven from "../components/Seven.vue";
-// import Eight from "../components/Eight.vue";
 
 export default {
   name: "Home",
@@ -158,9 +144,7 @@ export default {
     ExampleCard4,
     EmployeesTable,
     Footer,
-    // Six,
     Seven,
-    // Eight,
   },
   data() {
     return {

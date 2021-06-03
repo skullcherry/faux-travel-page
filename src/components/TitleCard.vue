@@ -1,5 +1,5 @@
 <template>
-  <v-card color="rgb(0, 0, 0, 0)" flat>
+  <v-card color="rgb(0, 0, 0, 0)" flat tile>
     <v-img
       lazy-src="../assets/mifxal-latheef-204486-unsplash.png"
       src="../assets/mifxal-latheef-204486.png"
@@ -16,25 +16,20 @@
           </div>
         </v-card-text>
 
-        <v-item-group class="btn-group">
-          <v-item>
-            <v-btn color="#cb0202" fab small dark>
-              <v-icon>mdi-play</v-icon>
-            </v-btn>
-          </v-item>
-
-          <v-item>
-            <v-btn class="btn-text" x-small text>Watch the video</v-btn>
-          </v-item>
-        </v-item-group>
+        <VideoPopup />
       </v-row>
     </v-img>
   </v-card>
 </template>
 
 <script>
+import VideoPopup from "./VideoPopup.vue";
+
 export default {
   name: "TitleCard",
+  components: {
+    VideoPopup,
+  },
 };
 </script>
 
@@ -69,20 +64,5 @@ export default {
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);
-}
-.btn-group {
-  padding-top: 60px;
-  left: 50%;
-  transform: translate(-50%, 0);
-}
-.btn-text {
-  color: #ffffff;
-  line-height: 24px;
-  font-size: 10px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: bold;
-  letter-spacing: 25;
-  margin-right: 40px;
-  text-transform: none !important;
 }
 </style>
