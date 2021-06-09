@@ -1,8 +1,8 @@
 <template>
   <v-card class="mx-auto my-12 full" flat>
     <v-img
-      lazy-src="../assets/chelsea-gates-1419582-unsplash.png"
-      src="../assets/chelsea-gates-1419582.png"
+      lazy-src="@/assets/chelsea-gates-1419582-unsplash.png"
+      src="@/assets/chelsea-gates-1419582.png"
       class="image"
     ></v-img>
     <v-card-text>

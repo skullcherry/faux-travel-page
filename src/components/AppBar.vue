@@ -17,16 +17,38 @@
         :to="link.url"
         x-small
         class="top-links"
+        router
       >
         {{ link.label }}
       </v-btn>
     </v-col>
 
     <v-col class="text-right pr-13">
-      <v-btn text rounded to="/login" x-small class="top-links"> Login </v-btn>
-      <v-btn text rounded to="/register" x-small class="top-links">
-        Register
-      </v-btn>
+      <router-link to="/login" custom v-slot="{ navigate }">
+        <v-btn
+          @click="navigate"
+          @keypress.enter="navigate"
+          role="link"
+          text
+          rounded
+          x-small
+          class="top-links"
+          >Login</v-btn
+        >
+      </router-link>
+
+      <router-link to="/register" custom v-slot="{ navigate }">
+        <v-btn
+          @click="navigate"
+          @keypress.enter="navigate"
+          role="link"
+          text
+          rounded
+          x-small
+          class="top-links"
+          >Register</v-btn
+        >
+      </router-link>
     </v-col>
   </v-app-bar>
 </template>

@@ -1,8 +1,8 @@
 <template>
   <v-card class="mx-auto my-12 full" flat>
     <v-img
-      lazy-src="../assets/sebastian-pena-lambarri-1215804-unsplash.png"
-      src="../assets/sebastian-pena-lambarri-1215804.png"
+      lazy-src="@/assets/sebastian-pena-lambarri-1215804-unsplash.png"
+      src="@/assets/sebastian-pena-lambarri-1215804.png"
       class="image"
     ></v-img>
     <v-card-text>

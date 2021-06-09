@@ -1,8 +1,8 @@
 <template>
   <v-card class="mx-auto my-12 full" flat>
     <v-img
-      lazy-src="../assets/magnus-lindvall-4407-unsplash.png"
-      src="../assets/magnus-lindvall-4407.png"
+      lazy-src="@/assets/magnus-lindvall-4407-unsplash.png"
+      src="@/assets/magnus-lindvall-4407.png"
       class="image"
     ></v-img>
 

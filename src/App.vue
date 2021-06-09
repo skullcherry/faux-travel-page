@@ -1,16 +1,11 @@
 <template>
-  <div id="App">
-    <Home />
-  </div>
+  <div id="App"><router-view /></div>
 </template>
 
 <script>
-import Home from "./views/Home.vue";
 export default {
   name: "App",
-  components: {
-    Home,
-  },
+  components: {},
 };
 </script>
 
@@ -24,37 +19,4 @@ $color6: #cb0202;
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 @import url("https://use.typekit.net/hxm7brb.css");
-
-.example-title {
-  color: #231f20;
-  margin-bottom: 47px;
-  font-weight: bold;
-
-  &--first {
-    font-size: 42px;
-    max-width: 360px;
-    line-height: 42px;
-  }
-  &--second {
-    font-size: 24px;
-    max-width: 200px;
-    line-height: 32px;
-  }
-
-  &--third {
-    font-size: 42px;
-    max-width: 400px;
-    line-height: 42px;
-  }
-}
-.example-subtitle--first {
-  color: #999999;
-  font-size: 16px;
-  max-width: 485px;
-}
-.example-subtitle--second {
-  color: #999999;
-  font-size: 16px;
-  max-width: 410px;
-}
 </style>

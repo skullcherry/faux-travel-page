@@ -97,7 +97,7 @@
     </v-container>
 
     <!-- table -->
-    <div style="background-color: #fcfcfc">
+    <div style="background-color: #fcfcfc" v-intersect="showMoreContent">
       <v-container class="vertical-line">
         <div>
           <div class="dot"></div>
@@ -123,11 +123,11 @@
 import AppBar from "../components/AppBar";
 import employeesData from "../data/employees.json";
 import TitleCard from "../components/TitleCard";
-import ExampleCard1 from "../components/ExampleCard1";
-import ExampleCard2 from "../components/ExampleCard2";
+import ExampleCard1 from "../components/ExampleCards/ExampleCard1";
+import ExampleCard2 from "../components/ExampleCards/ExampleCard2";
 // import SecondTitleCard from "../components/SecondTitleCard";
-import ExampleCard3 from "../components/ExampleCard3";
-import ExampleCard4 from "../components/ExampleCard4";
+import ExampleCard3 from "../components/ExampleCards/ExampleCard3";
+import ExampleCard4 from "../components/ExampleCards/ExampleCard4";
 import EmployeesTable from "../components/EmployeesTable";
 import Footer from "../components/Footer";
 import Seven from "../components/Seven.vue";
@@ -150,34 +150,6 @@ export default {
     return {
       employees: employeesData,
       loadNewContent: false,
-      headline:
-        "Here You Learn Everything about building Progressive Vue Apps!",
-      sections: [
-        { headline: "What does a Service Worker do?" },
-        {
-          headline: "How does a Service Worker exactly work?",
-        },
-      ],
-      cards: [
-        {
-          headline: "Makes App available Offline",
-          text:
-            "By using the CachingAPI all static elements on an app can be pre-cached",
-          imgName: "../assets/damien-checoury-749044.png",
-        },
-        {
-          headline: "Use background sync to defer actions",
-          text:
-            "User inputs entered when offline are sent in the background once they get connectivity.",
-          imgName: "../assets/damien-checoury-749044.png",
-        },
-        {
-          headline: "Send Push Notifications",
-          text:
-            "The Notifications API lets us send push notifications to re-engage users.",
-          imgName: "../assets/damien-checoury-749044.png",
-        },
-      ],
     };
   },
   methods: {
@@ -188,7 +160,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .first-blurb {
   padding-left: 130px;
 }
@@ -247,5 +219,40 @@ export default {
   position: absolute;
   margin-left: -15px;
   margin-top: 20px;
+}
+
+.example-title {
+  color: #231f20;
+  margin-bottom: 47px;
+  font-weight: bold;
+
+  &--first {
+    font-size: 42px;
+    max-width: 360px;
+    line-height: 42px;
+  }
+  &--second {
+    font-size: 24px;
+    max-width: 200px;
+    line-height: 32px;
+  }
+
+  &--third {
+    font-size: 42px;
+    max-width: 400px;
+    line-height: 42px;
+  }
+}
+.example-subtitle {
+  color: #999999;
+  font-size: 16px;
+
+  &--first {
+    max-width: 485px;
+  }
+
+  &--second {
+    max-width: 410px;
+  }
 }
 </style>
